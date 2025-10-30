@@ -58,15 +58,6 @@ body{
     margin: 0;
 }
 
-/* MAIN */
-
-.main{
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-
-    background-color: var(--color-bg-body);
-}
-
 .icon{
     width: 2rem;
     height: auto;
@@ -86,6 +77,16 @@ body{
     text-align: center;
     border: none;
 }
+
+/* MAIN */
+
+.main{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    background-color: var(--color-bg-body);
+}
+
 
 /* HEADER */
 
@@ -153,7 +154,23 @@ body{
     grid-row: 1 / 3;
 
     background-color: var(--color-primary);
+
+    color: var(--color-bg-header);
+    font-weight: 700;
+    padding: 16px;
 }
 
+.sidebar__title{
+  padding-bottom: 32px;
+  font-size: large;
+}
+
+.sidebar__content img{
+  color: white;
+}
+
+.sidebar__content{
+  padding-bottom: 32px;
+}
 
 
