@@ -124,6 +124,28 @@ body{
     height: 2rem;
 }
 
+.header__bottom{
+  display: flex;
+  justify-content: space-around;
+}
+
+.header__bottom-one{
+  display: flex;
+  grid-area: 8px;
+}
+
+.header__bottom-two{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.header__bottom-profile-pic img{
+  width: 5rem;
+  height: auto;
+  align-items: center;
+}
+
 /* SIDEBAR */
 
 .sidebar{
