@@ -30,12 +30,11 @@ a {
 }
 
 html, body {
-  height: 100%;
-  width: 100%;
   line-height: 1.5;
   font-family: system-ui, sans-serif;
   background: #fff;
   color: #000;
+  overflow: hidden;
 }
 
 html {
@@ -98,11 +97,16 @@ b{
     align-items: stretch;
     padding: 16px;
     gap: 16px;
+    height: 100%;
+    min-height: 0;
 }
 
 .main__project{
   grid-column: 1 / 2;
   grid-row: 1 / 3;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .main__project b{
@@ -114,8 +118,9 @@ b{
   grid-template-columns: repeat(2 , 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 8px;
-  width: 100%;
-  height: 100%;
+
+  min-height: 0;
+  overflow-y: auto;
 }
 
 .main__project-card{
@@ -144,11 +149,17 @@ b{
 .main__announcement{
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .main__trending{
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .main__announcement-container{
@@ -161,6 +172,8 @@ b{
   display: flex;
   gap: 8px;
   flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
 }
 
 .main__announcement span{
@@ -170,38 +183,35 @@ b{
   background-color: var(--color-text-muted);
 }
 
-.main__trending-container{
-  background-color: var(--color-bg-header);
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
+.main__trending-container{ 
+  background-color: var(--color-bg-header); 
+  padding: 16px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .15); 
 
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-self: stretch;
-  justify-self: stretch;
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+  min-height: 0;
+  overflow-y: auto;
+} 
 
-}
+.main__trending-one, 
+.main__trending-two, 
+.main__trending-three, 
+.main__trending-four{ 
+  display: flex; 
+  gap: 8px; 
+  font-size: small; 
+} 
 
-.main__trending-one,
-.main__trending-two,
-.main__trending-three,
-.main__trending-four{
-  display: flex;
-  font-size: small;
-  align-items: center;
-}
+.main__trending-icon img{ 
+  display: inline-block; 
+  min-width: 3rem; 
+  min-height: 3rem; 
+} 
 
-.main__trending-icon img{
-  min-width: 3rem;
-  min-height: 3rem;
-  object-fit: cover; 
-  border-radius: 50%; 
-  display: block;
-}
-
-.main__trending-icon{
+.main__trending-icon{ 
   margin-block: auto;
 }
 
